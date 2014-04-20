@@ -7,7 +7,7 @@ var term = $(this).val();
 var search_data;
 search_results_container.html('');
 $.ajax({
-url:"http://tagslocal-new.herokuapp.com/searching",
+url:"/searching",
 type:"POST",
 data:{term2:term},
 success:function(data){
@@ -32,7 +32,7 @@ search_results_container.fadeOut(400);
 var trending_container = $('.main_product');
 var trending_data;
 $.ajax({
-url:"http://tagslocal-new.herokuapp.com/get_trending",
+url:"/get_trending",
 type:"POST",
 data:{},
 success:function(data){

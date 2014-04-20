@@ -63,7 +63,7 @@ res.render('search',{search_data:data,search_term:search_term});
 });
 });
 
-app.post('http://tagslocal-new.herokuapp.com/get_trending',function(req,res){
+app.post('/get_trending',function(req,res){
 console.log('trending');
 db1.get_trending_products(function(data){
 res.send(data);
