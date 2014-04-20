@@ -15,6 +15,7 @@ search_results_container.fadeIn(400);
 $.each(data,function(key,value){
 search_data += '<a href="/product/?product='+value['url']+'"><div class="results_container"><div class="search_result_item">'+value['name']+'</div></div></a>';
 });
+console.log(search_data);
 search_data = search_data.replace("undefined","");
 search_results_container.html(search_data);
 },
@@ -39,6 +40,7 @@ data_one = data.slice(0,5);
 $.each(data_one,function(key,value){
 trending_data += '<a href="/product/?product='+value['url']+'"><div class="one_product"><img src= "'+value['pic_path']+'" width="200" height="200" /><div class="product_name">'+value['name']+'</div><div class="product_desc"><a href="javascript:void(0);">Description &gt;&gt; </a ></div></div></a>';
 });
+console.log(trending_data);
 trending_data = trending_data.replace("undefined","");
 trending_container.html(trending_data);
 },
