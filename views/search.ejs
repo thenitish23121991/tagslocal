@@ -1,0 +1,103 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+<link rel="stylesheet" href="/stylesheets/search.css" type="text/css" />
+</head>
+
+
+<body>
+
+
+<% include header %>
+
+
+<div class="middle_container">
+<div class="search_container">
+<div class="search_left_container">
+<div class="search_filter_container">
+FILTER BY
+</div>
+<div class="search_category_container">
+<div class="search_category_top">
+BRANDS
+<div class="search_category_minimise"></div>
+</div>
+<div class="search_category_names search_category_brands">
+<!--
+<ul>
+<li><label class="search_brand_label"><input type="checkbox" class="search_brand_checkbox" selected="selected" />Samsung</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_brand_checkbox" selected="selected" />Nokia</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_brand_checkbox" selected="selected" />HTC</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_brand_checkbox" selected="selected" />Micromax</label></li>
+</ul>
+-->
+</div>
+</div>
+
+
+<div class="search_category_container">
+<div class="search_category_top">
+RETAILERS
+<div class="search_category_minimise"></div>
+</div>
+<div class="search_category_names search_category_retailers">
+<!--
+<ul>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />Takshu</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />TBGPL</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />Shopuli</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />Saholic</label></li>
+</ul>
+-->
+</div>
+</div>
+
+
+
+
+</div>
+<div class="search_right_container">
+<div class="search_right_search_container">
+<div class="search_field_container">
+<input type="text" value="<%= search_term %>" class="search_field" />
+<span class="search_field_icon"></span>
+</div>
+</div>
+<div class="search_products_container">
+<div class="search_products_title">
+<%= search_data[0]['category'] %><span class="num"> (<%= search_data.length %>)</span>
+</div>
+<div class="products_container">
+
+<% for(var i=0;i<search_data.length;i++){ %>
+<a href="/product?product=<%= search_data[i]['url'] %>">
+<div class="product_item">
+<div class="product_pic">
+<img src="<%= search_data[i]['pic_path'] %>" />
+</div>
+<div class="product_info" style="color:#333;">
+<%= search_data[i]['name'] %>
+<div class="product_info_price">
+<button name="product_more_button" class="product_more_button">More</button>
+</div>
+
+</div>
+</div>
+</a>
+<% } %>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<% include footer %>
+
+<script type="text/javascript" src="/javascripts/jquery.js"></script>
+<script type="text/javascript" src="/javascripts/search.js"></script>
+
+</body>
+</html>
