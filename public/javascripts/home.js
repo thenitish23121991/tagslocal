@@ -7,7 +7,7 @@ var term = $(this).val();
 var search_data;
 search_results_container.html('');
 $.ajax({
-url:"http://localhost:3000/searching",
+url:"/searching",
 type:"POST",
 data:{term2:term},
 success:function(data){
@@ -50,7 +50,7 @@ console.log(xhr+'<br/>'+status+'<br/>'+error);
 
 $('#font_search').bind('click',function(){
 var term = $('.search_box').val();
-location.href = 'http://localhost:3000/search/?search_term='+term;
+location.href = '/search/?search_term='+term;
 });
 
 
