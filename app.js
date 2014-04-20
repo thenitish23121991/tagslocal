@@ -69,6 +69,13 @@ res.send(data);
 });
 });
 
+app.get('/get_trending',function(req,res){
+
+db1.get_trending_products(function(data){
+res.send(data);
+});
+});
+
 
 app.post('/search_term',function(req,res){
 var search_term = req.body.search_term;
