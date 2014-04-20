@@ -48,6 +48,7 @@ app.get('/users', user.list);
 app.use(express.bodyParser());
 
 app.post('/searching',function(req,res){
+console.log('searching');
 var term1 = req.body.term2;
 var data123 = db1.find_home(term1,function(data){
 res.send(data);
@@ -63,7 +64,7 @@ res.render('search',{search_data:data,search_term:search_term});
 });
 
 app.post('/get_trending',function(req,res){
-
+console.log('trending');
 db1.get_trending_products(function(data){
 res.send(data);
 });
