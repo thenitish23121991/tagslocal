@@ -80,7 +80,7 @@ res.send(data);
 
 app.post('/trendingsearch',function(req,res){
 console.log('trending get');
-db1.show_products_by_brand('Nokia',function(data){
+db1.get_trending_products(function(data){
 res.send(data);
 });
 });

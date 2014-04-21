@@ -139,7 +139,7 @@
                                                                 </div>
 
                                                                 <div class="categories">
-                                                                    <span><i class="icon-tags"></i><a href="category.html" title="Dresses"><%= c_data[0]['category'] %></a></span>
+                                                                    <span><i class="icon-tags"></i><a href="/category?category=<%= c_data[0]['category'] %>" title="<%= c_data[0]['category'] %>"><%= c_data[0]['category'] %></a></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -164,14 +164,13 @@
                                                 
                                                 <!-- Description tab -->
                                                 <div class="tab-pane" id="description">
-                                                    <p><span>Vintage-style faux leather short overalls. Long adjustable straps with brass detailing, exposed zip at back, and side slant pockets with single rear welt pocket.</span><br /><br />
-                                                        <span>100% Polyester</span>
+                                                    <p><span><%= c_data[0]['description'] %></span>
                                                     </p>						
                                                 </div>
                                                 <!-- End id="description" -->
 
                                                 <!-- Shipping tab -->
-                                                <div class="tab-pane" id="shipping">
+                                                <div class="tab-pane" id="Retailers">
                                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
                                                     <p><img class="img-polaroid" src="http://www.tfingi.com/repo/royal-mail.png" alt="" /><img class="img-polaroid" src="http://www.tfingi.com/repo/ups-logo.png" alt="" /></p>
                                                     <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>

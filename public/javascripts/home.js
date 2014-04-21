@@ -36,13 +36,13 @@ url:"/trendingsearch",
 type:"POST",
 data:{},
 success:function(data){
+console.log(data);
 data_one = data.slice(0,5);
 $.each(data_one,function(key,value){
 trending_data += '<a href="/product/?product='+value['url']+'"><div class="one_product"><img src= "'+value['pic_path']+'" width="200" height="200" /><div class="product_name">'+value['name']+'</div><div class="product_desc"><a href="javascript:void(0);">Description &gt;&gt; </a ></div></div></a>';
 });
-console.log(trending_data);
 trending_data = trending_data.replace("undefined","");
-trending_container.html(trending_data);
+$('.main_product').html(trending_data);
 },
 error:function(xhr,status,error){
 console.log(xhr+'<br/>'+status+'<br/>'+error);

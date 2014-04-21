@@ -99,12 +99,12 @@ margin-left:15px;
 
 .middle_container{
 min-height:600px;;
-margin-top:120px;
+margin-top:99px;
 }
 
 .menu_container{
 	width:100%;
-	color:#000;
+	color:rgb(128,128,128);
 	background:#fff;
 	border-bottom:1px solid rgba(0,0,0,.2);
 	font-family:'DinProBold';
@@ -115,6 +115,7 @@ margin-top:120px;
 	height:250px;
 	width:100%;
 	border-bottom:1px solid rgba(0,0,0,.05);
+	background:#efefe9;
 	
 
 }.search_div{
@@ -141,7 +142,7 @@ margin-top:120px;
 }
 
 .product_container{
-		min-height:520px;
+		min-height:320px;
 		width:100%;
 
 
@@ -158,7 +159,7 @@ margin-top:120px;
 
 .product_icon{
 				position:absolute;
-		top:530px;
+		top:533px;
 		font-family:'Header-icon';
 		font-size:100px;
 		color:rgba(0,0,0,.6);
@@ -166,15 +167,23 @@ margin-top:120px;
 		
 		cursor:pointer;
 }
+#left_icon{
+left:34px;
+}
+#right_icon{
+right:34px;
+}
 #left_icon:before{
 
 	margin-left:5px;
 	content:'\e80d';
+	font-size:68px;
 }
 
 #right_icon:before{
 		
 		content:'\e80e';
+			font-size:68px;
 }
 
 
@@ -183,7 +192,7 @@ margin-top:120px;
 	display: inline-block;
 	width:93%;
 	height:320px;
-    margin-top:50px;
+    margin-top:70px;
 	margin-left:50px;
 }
 
@@ -238,6 +247,7 @@ cursor:pointer;
 position:relative;
 	left:350px;
 	top:-32px;
+	-webkit-transition:all .2s ease;
 }
 
 #font_search:before{
@@ -309,6 +319,7 @@ padding-bottom:10px;
 padding-top:10px;
 padding-left:31%;
 padding-bottom:5px;
+font-size:13px;
 }
 
 .menu_option{
@@ -514,9 +525,9 @@ list-style-type:none;
 overflow:hidden;
 }
 .footer_menu ul li a{
-padding-top:13px;
+padding-top:18px;
 display:block;
-font-size:18px;
+font-size:14px;
 font-family:'DinProLight';
 }
 .primary img{
@@ -531,4 +542,7 @@ font-size:18px;
 padding-bottom:13px;
 display:block;
 color:#333;
+}
+.search_box:focus ~ #font_search:before{
+color:#1ebcfa;
 }
