@@ -18,7 +18,7 @@
 
 
 <% for(var i=0;i<c_data.length;i++){ %>
-<a href="<%= c_data[0]['url'] %>">
+<a href="/product?product=<%= c_data[0]['url'] %>">
 <div class="one_product"><img src= "<%= c_data[i]['pic_path'] %>" width="200" height="200" />
 <div class="product_name"><%= c_data[i]['name'] %></div>
 <div class="product_desc"><a href="javascript:void(0);">Description &gt;&gt; </a >
