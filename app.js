@@ -78,7 +78,7 @@ res.send(data);
 });
 
 
-app.get('/trending_search',function(req,res){
+app.post('/trending_search',function(req,res){
 console.log('trending get');
 db1.get_trending_products(function(data){
 res.send(data);
