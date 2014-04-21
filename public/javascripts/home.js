@@ -32,7 +32,7 @@ search_results_container.fadeOut(400);
 var trending_container = $('.main_product');
 var trending_data;
 $.ajax({
-url:"/get_trending",
+url:"/trending_search",
 type:"POST",
 data:{},
 success:function(data){
