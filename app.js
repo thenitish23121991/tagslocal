@@ -70,7 +70,7 @@ res.send(data);
 });
 });
 
-app.get('/get_trending',function(req,res){
+app.get('/gettrending',function(req,res){
 console.log('trending get');
 db1.get_trending_products(function(data){
 res.send(data);
@@ -78,7 +78,7 @@ res.send(data);
 });
 
 
-app.post('/trending_search',function(req,res){
+app.post('/trendingsearch',function(req,res){
 console.log('trending get');
 db1.get_trending_products(function(data){
 res.send(data);
