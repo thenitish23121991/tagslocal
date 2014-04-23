@@ -58,7 +58,6 @@ res.send(data);
 app.get('/search',function(req,res){
 var search_term = req.query.search_term;
 db1.find_similar(search_term,function(data){
-console.log(data);
 res.render('search',{search_data:data,search_term:search_term});
 });
 });
@@ -113,6 +112,22 @@ retailer_arr = req.body.retailer_arr;
 var term = req.body.term;
 db1.get_search_filter(brands_arr,retailer_arr,term,function(data){
 console.log(data.length);
+res.send(data);
+});
+});
+
+
+app.post('/search_page',function(req,res){
+var search_term = req.body.search_term;
+db1.find_similar(search_term,function(data){
+res.send(data);
+});
+});
+
+
+app.post('/get_similar_products',function(req,res){
+var brand = req.body.brand;
+db1.get_similar_products(brand,function(data){
 res.send(data);
 });
 });
@@ -202,16 +217,14 @@ http.createServer(app).listen(app.get('port'), function(){
 
 
 // });
-
-
 /*
-
 for(var i=2;i<=7;i++){
 var website_name = "http://www.gsmarena.com/nokia-phones-f-1-0-p"+i+".php";
 
 	crawled.crawl_site_gsmarena(website_name,'Nokia');
 
 }
+/*
 
 crawled.crawl_site_gsmarena('http://www.gsmarena.com/samsung-phones-9.php','Samsung');
 
@@ -263,8 +276,6 @@ for(var i=2;i<=3;i++){
 
 }
 
-*/
-/*
 crawled.crawl_site_gsmarena('http://www.gsmarena.com/nokia-phones-1.php','Nokia');
 
  crawled.crawl_site_gsmarena('http://www.gsmarena.com/dell-phones-61.php','Dell');
@@ -300,7 +311,7 @@ for(var i=2;i<=5;i++){
 }
 crawled.crawl_site_gsmarena('http://www.gsmarena.com/acer-phones-59.php','Acer');
 crawled.crawl_site_gsmarena('http://www.gsmarena.com/acer-phones-f-59-0-p2.php','Acer');
-	*/
+*/
 
 // request('http://www.huaweidevice.co.in/Products/SmartPhones/', function(error,response,html){
 

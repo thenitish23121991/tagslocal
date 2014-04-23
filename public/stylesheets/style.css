@@ -20,6 +20,10 @@ font-family:'DinProBold';
 src:url('DINProLight.ttf');
 font-family:'DinProLight';
 }
+@font-face{
+src:url('SourceSansPro-Bold.otf');
+font-family:'SourceSansProBold';
+}
 .main_container{
 
 width:100%;
@@ -34,6 +38,9 @@ width:100%;
 	width:100%;
 		z-index:20000;
 
+
+}
+.header a{
 }
 
 .header_div{
@@ -42,8 +49,13 @@ width:100%;
 	width:100%;
 	background: #63605c;
 
-	color:#fff;
+	color:#333;
     font-family:'DinProBold';
+			background:#fff;
+}
+.logo_blue, .logo_red{
+font-size:23px;
+font-family:'BGLight';
 }
 .logo_div{
 float:left;
@@ -68,7 +80,7 @@ cursor:pointer;
 }
 
 .signup_button{
-	background:#007fcc;
+	background:#1abc9c;
 	position:absolute;
 	top:9px;
 	right:210px;
@@ -76,6 +88,7 @@ cursor:pointer;
 	cursor:pointer;
 	font-family:'DinProLight';
 	font-size:13px;
+	color:#fff;
 
 }
 .select_city{
@@ -104,30 +117,28 @@ margin-top:99px;
 
 .menu_container{
 	width:100%;
-	color:rgb(128,128,128);
-	background:#fff;
+	color:#fff;
+	background:#333;
 	border-bottom:1px solid rgba(0,0,0,.2);
-	font-family:'DinProBold';
+font-family:'SourceSansProBold';
 
 }
 
 .search_container{
-	height:250px;
+	height:300px;
 	width:100%;
 	border-bottom:1px solid rgba(0,0,0,.05);
-	background:#efefe9;
-	
 
 }.search_div{
 	position:relative;
-	top:85px;
-	left:440px;
+	top:125px;
+	left:450px;
 	height:50px;
 	width:380px;
 }
 .search_box{
-	height:48px;
-	width:380px;
+	height:54px;
+	width:440px;
 	border:1px solid rgba(0,0,0,.12);
 	font-family:'BGLight';
 	outline:none;
@@ -245,8 +256,12 @@ a{
 #font_search{
 cursor:pointer;
 position:relative;
-	left:350px;
-	top:-32px;
+	left:400px;
+	height:54px;
+	width:44px;
+	background:#1abc9c;
+	top:-54px;
+	display:block;
 	-webkit-transition:all .2s ease;
 }
 
@@ -255,8 +270,10 @@ position:relative;
 	content:"\e804";
 	width:35px;
 	height:35px;
+	top:18px;
+	left:13px;
 	position:absolute;
-	color:rgba(0,0,0,.4);
+	color:#fff;
 
 	
 }
@@ -273,7 +290,7 @@ position:relative;
 .menu_items{
 	padding:0px 24px;
 	cursor:pointer;
-	color:#808080;
+	color:#fff;
 	font-size:16px;
 	-moz-transition:all .2s ease;
 	-webkit-transition:all .2s ease;
@@ -288,7 +305,7 @@ position:relative;
 
 .footer_div{
 width:100%;
-background: #63605c;
+
 color:#fff;
 clear:both;
 
@@ -316,10 +333,11 @@ padding-bottom:10px;
 }
 
 .footer_menu{
-padding-top:10px;
+padding-top:2px;
 padding-left:31%;
 padding-bottom:5px;
 font-size:13px;
+background:rgb(42,42,42);
 }
 
 .menu_option{
@@ -400,7 +418,7 @@ font-family:'DinProBold';
 font-size:21px;
 color:#333;
 display:none;
-z-index:100000;
+z-index:999;
 width:400px;
 background:#fff;
 border:1px solid rgba(0,0,0,.12);
@@ -543,6 +561,27 @@ padding-bottom:13px;
 display:block;
 color:#333;
 }
-.search_box:focus ~ #font_search:before{
-color:#1ebcfa;
+
+.brand_name{
+display:none;
+}
+
+
+ul.product-list{
+margin-left:100px;
+}
+.menu_items{
+-webkit-transform:all .2s ease;
+-moz-transform:all .2s ease;
+-ms-transform:all .2s ease;
+-o-transform:all .2s ease;
+}
+.menu_items:hover{
+color:#1abc9c;
+}
+#font_search:before{
+-webkit-transition:all .3s ease;
+-moz-transition:all .3s ease;
+-o-transition:all .3s ease;
+-ms-transition:all .3s ease;
 }

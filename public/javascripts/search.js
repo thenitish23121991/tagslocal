@@ -8,6 +8,23 @@ $('.search_category_minimise').bind('click',function(){
 });
 
 
+$('.search_field_icon').bind('click',function(){
+var search_term = $('.search_field').val();
+$.ajax({
+url:"/search_page",
+type:"POST",
+data:{search_term:search_term},
+success:function(data){
+$('.products_container').html('4841.gif');
+add_products(data);
+},
+error:function(xhr,status,error){
+console.log(xhr+'<br/>'+status+'<br/>'+error);
+}
+});
+});
+
+
 get_product_brands();
 
 function get_product_brands(){
@@ -76,6 +93,7 @@ console.log(xhr+'b'+status+'b'+error);
 function bind_events(){
 
 $('.search_brand_checkbox').bind('change',function(){
+$('.products_container').html('<img src="/images/4841.gif" style="position:absolute;top:80%;left:50%" />');
 var text = $(this).parent().text();
 console.log(text);
 if($(this).is(":checked")){
