@@ -74,8 +74,8 @@ res.render('search',{search_data:data,search_term:search_term,total_results_num:
 
 
 app.post('/get_product_colors',function(req,res){
-db1.get_product_colors(data,function(){
-
+var name = req.body.name;
+db1.get_product_colors(name,function(data){
 });
 });
 
@@ -106,8 +106,8 @@ res.send(data);
 
 
 app.post('/trendingsearch',function(req,res){
-console.log('trending get');
 db1.get_trending_products(function(data){
+console.log(data);
 res.send(data);
 });
 });
@@ -188,6 +188,15 @@ retailer.get_product_retailers(name,function(data,retailer_data){
 res.send(retailer_data);
 });
 });
+
+
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/samsung/mobiles-mobile-phones','Samsung');
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/micromax/mobiles-mobile-phones','Micromax');
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/apple/mobiles-mobile-phones','Apple');
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/xolo/mobiles-mobile-phones','Xolo');
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/sony/mobiles-mobile-phones','Sony'); 
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/nokia/mobiles-mobile-phones','Nokia');
+
 
 
 

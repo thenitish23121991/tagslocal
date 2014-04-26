@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 var search_results_container = $('.search_results_container');
 
 $('.search_box').bind('keyup',function(){

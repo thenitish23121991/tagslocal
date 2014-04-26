@@ -139,8 +139,7 @@
                                                             <p><%= c_data[0]['description'] %></p>
                                                         </div>
 														<div class="product_specs">
-														<%
-                                                       var specs = JSON.parse(c_data[0]['specification_array']); %>
+													
 														</div>
 															 <div class="social">
 														        <div id="sharrre">
@@ -167,12 +166,7 @@
                                                 
                                                 <!-- Description tab -->
                                                 <div class="tab-pane" id="specifications">
-                                                    <p><span><% 
-                                                    var specs_arr = JSON.parse(c_data[0]['specification_array']);
-													for(key in specs_arr){ %>
-													<%= key %> : <%= specs_arr[key] %><br/>
-													
-													<% } %></span>
+                                                    <p><span></span>
                                                     </p>						
                                                 </div>
                                                 <!-- End id="description" -->

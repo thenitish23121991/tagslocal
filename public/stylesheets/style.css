@@ -24,6 +24,10 @@ font-family:'DinProLight';
 src:url('SourceSansPro-Bold.otf');
 font-family:'SourceSansProBold';
 }
+@font-face{
+src:url('MuseoSans500.ttf');
+font-family:'MuseoSans500';
+}
 .main_container{
 
 width:100%;
@@ -127,7 +131,7 @@ font-family:'BGLight';
 .search_container{
 	height:300px;
 	width:100%;
-	border-bottom:1px solid rgba(0,0,0,.05);
+	border-bottom:1px solid rgba(0,0,0,.09);
 
 }.search_div{
 	position:relative;
@@ -161,16 +165,18 @@ font-family:'BGLight';
 }
 .product_title{
 		padding-top:20px;
-		margin-left:90px;
 		font-size:26px;
-		font-family:'DinProBold';
+        font-family:'MuseoSans500';
+		text-align:center;
 
 
 }
-
+.product_slider{
+width:80%;
+}
 .product_icon{
 				position:absolute;
-		top:533px;
+		top:593px;
 		font-family:'Header-icon';
 		font-size:100px;
 		color:rgba(0,0,0,.6);
@@ -211,7 +217,11 @@ right:34px;
 .one_product{
 	float:left;
 	margin-left:40px;
+	width:16%;
 
+}
+.one_product:first-child{
+margin-left:80px;
 }
 
 .product_name{

@@ -5,6 +5,7 @@ var retailer_arr = new Array();
 var search_arr = "";
 var page = 1;
 var no = 10;
+var search_data = new Array();
 
 $('.search_category_minimise').bind('click',function(){
 
@@ -30,6 +31,7 @@ console.log(xhr+'<br/>'+status+'<br/>'+error);
 
 
 get_product_brands();
+get_product_colors();
 
 function get_product_brands(){
 var name = $('.search_field').val();
@@ -40,6 +42,25 @@ type:"POST",
 data:{name:name},
 success:function(data){
 add_brands(data);
+add_colors(data);
+bind_events();
+},
+error:function(xhr,status,error){
+console.log(xhr+'b'+status+'b'+error);
+}
+});
+}
+
+function get_product_colors(){
+var name = $('.search_field').val();
+
+$.ajax({
+url:"/get_product_colors",
+type:"POST",
+data:{name:name},
+success:function(data){
+console.log(data);
+add_colors(data);
 bind_events();
 },
 error:function(xhr,status,error){
@@ -56,6 +77,15 @@ brands_data += '<li><label class="search_brand_label"><input type="checkbox" cla
 });
 brands_data += '</ul>';
 $('.search_category_brands').html(brands_data);
+}
+
+function add_colors(data){
+var colors_data = '<ul>';
+$.each(data,function(key,value){
+colors_data += '<li><label class="search_brand_label"><input type="checkbox" class="search_brand_checkbox" selected="selected" />'+value+'</label></li>';
+});
+colors_data += '</ul>';
+$('.search_category_brands').html(colors_data);
 }
 
 function add_products(data){
