@@ -220,3 +220,10 @@ float:left;
 display:block;
 margin:0px auto;
 }
+.search_products_title{
+background:rgba(0,0,0,.09);
+padding:7px;
+margin:19px 0px;
+margin-top:23px;
+font-size:15px;
+}
