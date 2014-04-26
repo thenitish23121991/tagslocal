@@ -16,6 +16,9 @@ var cheerio = require('cheerio');
 var url = require('url');
 var category = require('category');
 //var request1 = require('request1');
+var page1 = require('page');
+var retailer = require('retailer');
+var search_page_data = new Array();
 
 var db1 = require('db');
 
@@ -56,9 +59,34 @@ res.send(data);
 });
 
 app.get('/search',function(req,res){
+var page = 0;
 var search_term = req.query.search_term;
-db1.find_similar(search_term,function(data){
-res.render('search',{search_data:data,search_term:search_term});
+var no = req.query.no;
+if(typeof(req.query.page) != "undefined"){
+page = req.query.page;
+}
+console.log(no);
+db1.find_similar(search_term,page,no,function(data,total_results_num){
+search_page_data = data;
+res.render('search',{search_data:data,search_term:search_term,total_results_num:total_results_num});
+});
+});
+
+
+app.post('/get_product_colors',function(req,res){
+db1.get_product_colors(data,function(){
+
+});
+});
+
+
+app.post('/search_ajax',function(req,res){
+var page = req.body.page;
+var search_term = req.body.search_term;
+var no = req.body.no;
+db1.find_similar(search_term,page,no,function(data,total_results_num){
+search_page_data = data;
+res.send(data);
 });
 });
 
@@ -119,7 +147,9 @@ res.send(data);
 
 app.post('/search_page',function(req,res){
 var search_term = req.body.search_term;
-db1.find_similar(search_term,function(data){
+var page = req.body.page;
+var no = req.body.no;
+db1.find_similar(search_term,page,no,function(data){
 res.send(data);
 });
 });
@@ -151,6 +181,15 @@ res.render('product',{url:url,c_data:data});
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+app.post('/get_product_retailers',function(req,res){
+var name = req.body.name;
+retailer.get_product_retailers(name,function(data,retailer_data){
+res.send(retailer_data);
+});
+});
+
+
 
 // www.nokia.com
 

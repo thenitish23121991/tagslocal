@@ -40,11 +40,13 @@ color:#333;
 .search_left_container,.search_right_container{
 float:left;
 min-height:700px;
+
 }
 .search_left_container{
 font-size:15px;
 width:17%;
 padding:0% 6%;
+padding-top:23px;
 }
 .search_right_container{
 width:57%;
@@ -52,6 +54,7 @@ font-family:'BGLight';
 }
 .search_right_search_container{
 position:relative;
+padding-top:23px;
 }
 .search_field{
 position:relative;
@@ -83,18 +86,18 @@ font-family:'tagslocal';
 }
 .search_field_icon{
 position:absolute;
-top:0px;
-left:255px;
-height:35px;
-width:34px;
+top:23px;
+left:251px;
+height:46px;
+width:38px;
 background:#00aeef;
 z-index:1001;
 cursor:pointer;
 }
 .search_field_icon:before{
 position:absolute;
-top:9px;
-left:10px;
+top:14px;
+left:12px;
 font-size:16px;
 font-family:'tagslocal';
 content:'\e80b';

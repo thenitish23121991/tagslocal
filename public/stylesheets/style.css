@@ -120,7 +120,7 @@ margin-top:99px;
 	color:#fff;
 	background:#333;
 	border-bottom:1px solid rgba(0,0,0,.2);
-font-family:'SourceSansProBold';
+font-family:'BGLight';
 
 }
 
@@ -584,4 +584,69 @@ color:#1abc9c;
 -moz-transition:all .3s ease;
 -o-transition:all .3s ease;
 -ms-transition:all .3s ease;
+}
+.search_right_container{
+padding-bottom:50px;
+}
+.products_container{
+}
+.show_more_products{
+width:100%;
+}
+.show_more_products_button{
+width:100%;
+height:42px;
+text-align:center;
+margin-top:80px;
+background:#1abc9c;
+color:#fff;
+border:none;
+font-family:'DinProLight';
+font-size:15px;
+cursor:pointer;
+}
+
+.search_field_container .search_field{
+padding:22px 18px;
+}
+.details h1{
+font-size:23px;
+}
+.retailer_container{
+padding:14px 0px;
+}
+.retailer_item{
+padding:12px;
+font-family:'BGLight';
+max-height:240px;
+color:#333;
+overflow:hidden;
+}
+.retailer_image{
+float:left;
+width:28%;
+height:110px;
+}
+.retailer_image img{
+height:100%;
+width:60%;
+}
+.retailer_info{
+float:left;
+width:66%;
+height:100%;
+}
+.retailer_title{
+font-size:21px;
+font-family:'DinProBold';
+}
+.retailer_address{
+font-size:13px;
+}
+.search_product_new{
+display:none;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease;
+-o-transition:all .2s ease;
+-ms-transition:all .2s ease;
 }

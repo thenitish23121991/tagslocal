@@ -20,5 +20,25 @@ console.log(xhr+'<br/>'+status+'<br/>'+error);
 }
 });
 
+$('.retailers_tab').bind('click',function(){
+var retailer_data = "";
+var name = $('.details h1').text();
+$.ajax({
+url:"/get_product_retailers",
+type:"POST",
+data:{name:name},
+success:function(data){
+console.log(data);
+$.each(data,function(key,value){
+retailer_data = '<a href="/store/'+value['url']+'"><div class="retailer_item"><div class="retailer_image"><img src="'+value['logo']+'" /></div><div class="retailer_info"><div class="retailer_title">'+value['business_name']+'</div><div class="retailer_address">'+value['street_address']+'</div></div></div></a>';
+});
+$('.retailer_container').html(retailer_data);
+},
+error:function(xhr,status,error){
+console.log(xhr+'<br/>'+status+'<br/>'+error);
+}
+});
+});
+
 
 });

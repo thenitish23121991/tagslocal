@@ -66,7 +66,7 @@ RETAILERS
 </div>
 <div class="search_products_container">
 <div class="search_products_title">
-<%= search_data[0]['category'] %><span class="num"> (<%= search_data.length %>)</span>
+SHOWING <span class="num1"> <%= search_data.length %></span> OF <span class="total_num"><%= total_results_num %></span> RESULTS
 </div>
 <div class="products_container">
 
@@ -90,6 +90,11 @@ RETAILERS
 
 </div>
 </div>
+<% if(search_data.length >= 10){ %>
+<div class="show_more_products">
+<button class="show_more_products_button">Show more products</button>
+</div>
+<% } %>
 </div>
 </div>
 </div>
