@@ -14,6 +14,8 @@ $('.search_category_minimise').bind('click',function(){
 
 $('.search_field_icon').bind('click',function(){
 var search_term = $('.search_field').val();
+location.href = 'http://localhost:3000/search?search_term='+search_term+'&no=10';
+/*
 $.ajax({
 url:"/search_page",
 type:"POST",
@@ -27,6 +29,7 @@ error:function(xhr,status,error){
 console.log(xhr+'<br/>'+status+'<br/>'+error);
 }
 });
+*/
 });
 
 
