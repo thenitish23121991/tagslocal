@@ -85,7 +85,7 @@
                                                 <li>
                                                     <a href="#specifications" data-toggle="tab">
                                                         <i class="icon-info-sign icon-large"></i>
-                                                        <span class="hidden-phone">Specifications</span>
+                                                        <span class="hidden-phone">Full Specifications</span>
                                                     </a>
                                                 </li>
 
@@ -95,7 +95,7 @@
                                                         <span class="hidden-phone">Retailers</span>
                                                     </a>
                                                 </li>
-
+<!--
                                                 <li>
                                                     <a href="#returns" data-toggle="tab">
                                                         <i class="icon-undo icon-large"></i>
@@ -109,6 +109,8 @@
                                                         <span class="hidden-phone">Ratings</span>
                                                     </a>
                                                 </li>
+												
+												-->
                                             </ul>
                                             <!-- End Tab panels' navigation -->
                                             
@@ -133,6 +135,40 @@
                                                                     </div>
                                                             </div>
                                                         </div>
+														
+														<div class="best_price_container">
+														Best Price
+														<span class="price_container">
+														Rs.6300
+														</span>
+														</div>
+														
+														<div class="quick_specifications">
+														<div class="specifications_title">
+														Quick Specifications:
+														</div>
+														<div class="specifications_container">
+														<% c_data_desc = JSON.parse(c_data[0]['specification_array']) %>
+											
+														<span class="speci_key">Navigation:</span>
+														<span class="speci_value"><%= c_data_desc['Navigation:'] %></span>
+														
+															<span class="speci_key">Bluetooth:</span>
+														<span class="speci_value"><%= c_data_desc['Bluetooth:'] %></span>
+														
+															<span class="speci_key">Wi-Fi:</span>
+														<span class="speci_value"><%= c_data_desc['Wi-Fi:'] %></span>
+														<br/>
+														
+															<span class="speci_key">Sensors:</span>
+														<span class="speci_value"><%= c_data_desc['Sensors:'] %></span>
+														
+															<span class="speci_key">USB:</span>
+														<span class="speci_value"><%= c_data_desc['USB:'] %></span>
+														</div>
+												
+														
+														</div>
 
                                                         <div class="short-description">
 														
@@ -166,7 +202,8 @@
                                                 
                                                 <!-- Description tab -->
                                                 <div class="tab-pane" id="specifications">
-                                                    <p><span></span>
+                                                    <p>
+													<%=  c_data[0]['specs_html'] %>
                                                     </p>						
                                                 </div>
                                                 <!-- End id="description" -->

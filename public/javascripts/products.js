@@ -10,7 +10,7 @@ type:"POST",
 data:{brand:brand},
 success:function(data){
 $.each(data,function(key,value){
-similar_data += '<li class="standard" data-price="160"><a href="/product?product='+value['url']+'" title="'+value['name']+'"><div class="image"><img class="primary" src="'+value['pic_path']+'" alt="Lisette Dress" /><img class="secondary" src="'+value['pic_path']+'" alt="'+value['name']+'" /></div><div class="title"><h3>'+value['name']+'</h3></div><div class="more_button_div"><a href="/product/?product='+value['url']+'">More</a></div></a></li>';
+similar_data += '<li class="standard" data-price="160"><a href="/product?product='+value['url']+'" title="'+value['name']+'"><div class="image"><img class="primary" src="'+value['pic_path']+'" alt="Lisette Dress" /><img class="secondary" src="'+value['pic_path']+'" alt="'+value['name']+'" /></div><div class="title"><h3>'+value['name']+'</h3></div><div class="more_button_div"><a href="/product/?product='+value['url']+'" class="product_more_link">More</a></div></a></li>';
 });
 similar_data = similar_data.replace("undefined","");
 $('ul.product-list.isotope').html(similar_data);

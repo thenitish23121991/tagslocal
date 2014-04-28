@@ -194,12 +194,42 @@ res.send(retailer_data);
 });
 });
 
+/*
+crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Apple','Apple');
+
+for(var i=1;i<=10;i++){
+crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Nokia/page/'+i,'Nokia');
+}
+
+
+for(var i=1;i<=10;i++){
+crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Motorola/page/'+i,'Motorola');
+}
+
+
+for(var i=1;i<=6;i++){
+crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/HTC/page/'+i,'HTC');
+}
+
+for(var i=1;i<=10;i++){
+crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/LG/page/'+i,'LG');
+}
+
+
+
+
+for(var i=1;i<=3;i++){
+crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/BlackBerry/page/'+i,'BlackBerry');
+}
+
+*/
+
 
 //crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/samsung/mobiles-mobile-phones','Samsung');
 //crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/micromax/mobiles-mobile-phones','Micromax');
 //crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/apple/mobiles-mobile-phones','Apple');
 //crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/xolo/mobiles-mobile-phones','Xolo');
-crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/sony/mobiles-mobile-phones','Sony'); 
+//crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/sony/mobiles-mobile-phones','Sony'); 
 //crawled.crawl_site_snapdeal('http://www.snapdeal.com/brand/nokia/mobiles-mobile-phones','Nokia');
 
 

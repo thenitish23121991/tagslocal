@@ -565,10 +565,11 @@ list-style-type:none;
 overflow:hidden;
 }
 .footer_menu ul li a{
-padding-top:18px;
+padding-top:13px;
 display:block;
 font-size:14px;
-font-family:'DinProLight';
+font-family:'MuseoSans500';
+text-decoration:none;
 }
 .primary img{
 width:64%;
@@ -671,4 +672,61 @@ display:none;
 -moz-transition:all .2s ease;
 -o-transition:all .2s ease;
 -ms-transition:all .2s ease;
+}
+
+.specifications_title{
+padding:14px 0px;
+font-size:19px;
+font-family:'Lato';
+color:#333;
+font-weight:bold;
+}
+.product_more_link{
+padding:12px 0px;
+font-size:15px;
+color:#1ebcfa;
+text-align:center;
+}
+.isotope-item, .standard{
+height:260px;
+overflow:hidden;
+}
+.isotope-item .image, .standard .image{
+height:180px;
+}
+.isotope-item .image img, .standard .image img{
+height:180px;
+}
+.isotope-item .title, .standard .title{
+height:50px;
+text-align:center;
+}
+.product-info .product-content #product form > div{
+border-bottom:none;
+}
+.product-info .product-content #product .details{
+padding-bottom:3px;
+}
+.specifications_container{
+width:57%;
+font-family:'BGLight';
+font-size:18px;
+}
+.speci_key{
+font-family:'Lato';
+font-weight:bold;
+margin-top:24px;
+font-size:14px;
+}
+.speci_value{
+font-family:'Lato';
+margin-right:22px;
+margin-top:24px;
+font-size:14px;
+}
+
+.best_price_container{
+padding:12px 0px;
+font-family:'BGLight';
+font-size:16px;
 }
