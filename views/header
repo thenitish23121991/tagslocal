@@ -1,0 +1,19 @@
+.header
+    .header_div
+        .logo_div
+          a(href='javascript:void(0)')
+            span.logo_blue TAGS
+            span.logo_red LOCAL
+        .login_button LOG IN
+        .signup_button SIGN UP
+        .select_city
+          span Select City
+          span#option_icon
+        .menu_container
+          .menu_div
+            span.menu_items Home
+            span.menu_items Phones
+            span.menu_items Watches
+            span.menu_items Pen Drives
+            span.menu_items Apparels
+            span.menu_items Accessories

@@ -1,0 +1,19 @@
+html
+  head
+    title Home Page
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+  body
+    .main_container
+	 include header.jade
+      .middle_container
+        .search_container
+          .search_div
+            input.search_box(type='text', name='search', placeholder='Search Products Here')
+            span#font_search
+        .product_container
+          .product_title Trending Products :
+          .product_slider
+            span#left_icon.product_icon
+            .main_product Your trending products  here
+            span#right_icon.product_icon
+			 include footer.jade

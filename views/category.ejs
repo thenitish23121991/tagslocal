@@ -1,0 +1,41 @@
+<html>
+<head><title>Home Page</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"  />
+<link rel="stylesheet" type="text/css" href="/stylesheets/category.css"  />
+
+
+</head>
+<body>
+
+<% include header %>
+
+
+<div class="middle_container">
+<div class="category_container">
+<div class="category_name"><span class="category_showing">SHOWING   </span>  <span class="category_title"><%= category_name %></span>
+</div>
+<div class="all_products">
+
+
+<% for(var i=0;i<c_data.length;i++){ %>
+<a href="/product?product=<%= c_data[0]['url'] %>">
+<div class="one_product"><img src= "<%= c_data[i]['pic_path'] %>" width="200" height="200" />
+<div class="product_name"><%= c_data[i]['name'] %></div>
+<div class="product_desc"><a href="javascript:void(0);">Description &gt;&gt; </a >
+</div>
+</div>
+</a>
+<% } %>
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+<% include footer %>
+
+
+</body>
+</html>
