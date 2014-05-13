@@ -1851,7 +1851,7 @@ nav.navigation {
 | MAIN
 ---*/
 .main {
-  padding: 40px 0 80px;
+  padding: 20px 0 80px;
 }
 /*---
 | CRUMBS
@@ -4448,4 +4448,7 @@ html[xmlns] .slides {
   .flex-video {
     padding-top: 0;
   }
+}
+.product-content .box{
+padding-bottom:0px;
 }

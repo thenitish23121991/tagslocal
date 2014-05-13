@@ -4384,7 +4384,7 @@ html[xmlns] .slides {
     width: 58.33%;
   }
   .row-collapse .span8 {
-    width: 66.66%;
+    width: 100%;
   }
   .row-collapse .span9 {
     width: 75%;
@@ -4439,4 +4439,47 @@ html[xmlns] .slides {
   .flex-video {
     padding-top: 0;
   }
+}
+.product-content{
+width:50%;
+float:left;
+border:none;
+background:none;
+height:80%;
+}
+
+
+.span4{
+border-color:#fff;
+padding-top:20px;
+box-shadow:none;
+-webkit-box-shadow:none;
+-moz-box-shadow:none;
+background:none;
+float:left;
+width:40%;
+height:80%;
+}
+.span8{
+padding-top:20px;
+background:#fff;
+width:80%;
+margin-left: 10%;
+height:400px;
+}
+
+.product_options_container{
+clear:both;
+
+}
+
+.product-content .box{
+overflow:hidden;
+box-shadow:none;
+height:350px;
+padding-bottom:0px;
+}
+
+.tab-content{
+
 }

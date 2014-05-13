@@ -146,7 +146,8 @@
     width: 870px;
   }
   .span8 {
-    width: 770px;
+	padding-top:15px;
+    width: 100%;
   }
   .span7 {
     width: 670px;
@@ -496,7 +497,7 @@
     width: 538px;
   }
   .span8 {
-    width: 476px;
+    width: 100%;
   }
   .span7 {
     width: 414px;

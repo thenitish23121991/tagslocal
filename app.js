@@ -21,7 +21,7 @@ var retailer = require('retailer');
 var search_page_data = new Array();
 
 var db1 = require('db');
-
+var nodemailer = require('nodemailer');
 var app = express();
 
 // all environments
@@ -148,6 +148,51 @@ console.log(data.length);
 res.send(data);
 });
 });
+
+app.get('/contact_us',function(req,res){
+
+res.render('contact_us');
+
+});
+app.get('/about_us',function(req,res){
+
+res.render('about');
+
+});
+app.post('/submit_form',function(req,res){
+console.log("submit");
+var category = req.body.category;
+var name = req.body.name;
+var email = req.body.email_addr;
+var message =  req.body.msg;
+var data = name + email + message + category;
+
+var smtpTransport = nodemailer.createTransport("SMTP",{
+   service: "Gmail",  // sets automatically host, port and connection security settings
+   auth: {
+       user: "tagslocalconnnect@gmail.com",
+       pass: "tagslocal123"
+   }
+});
+
+smtpTransport.sendMail({  //email options
+   from: "tagslocalconnect@gmail.com", // sender address.  Must be the same as authenticated user if using Gmail.
+   to: "nitsh7084@gmail.com", // receiver
+   subject: "Emailing with nodemailer", // subject
+   text: data // body
+}, function(error, response){  //callback
+   if(error){
+       console.log(error);
+   }else{
+       console.log("Message sent: " + response.message);
+   }
+   
+   smtpTransport.close(); // shut down the connection pool, no more messages.  Comment this line out to continue sending emails.
+});
+res.send(data);
+
+});
+
 
 
 app.post('/search_page',function(req,res){
@@ -307,6 +352,68 @@ var website_name = "http://www.gsmarena.com/nokia-phones-f-1-0-p"+i+".php";
 	crawled.crawl_site_gsmarena(website_name,'Nokia');
 
 }
+
+
+crawled.crawl_site_gsmarena('http://www.gsmarena.com/samsung-phones-9.php','Samsung');
+
+for(var i=2;i<=11;i++){
+
+	var website_name = "http://www.gsmarena.com/samsung-phones-f-9-0-p"+i+".php";
+
+	crawled.crawl_site_gsmarena(website_name,'Samsung');
+
+}
+
+
+crawled.crawl_site_gsmarena('http://www.gsmarena.com/motorola-phones-4.php','Motorola');
+
+for(var i=2;i<=8;i++){
+
+	var website_name = "http://www.gsmarena.com/motorola-phones-f-4-0-p"+i+".php";
+
+	crawled.crawl_site_gsmarena(website_name,'Motorola');
+
+}
+
+
+crawled.crawl_site_gsmarena('http://www.gsmarena.com/sony-phones-7.php','Sony');
+
+for(var i=2;i<=3;i++){
+
+	var website_name = "http://www.gsmarena.com/sony-phones-f-7-0-p"+i+".php";
+
+	crawled.crawl_site_gsmarena(website_name,'Sony');
+
+}
+crawled.crawl_site_gsmarena('http://www.gsmarena.com/apple-phones-48.php','Apple');
+
+crawled.crawl_site_gsmarena('http://www.gsmarena.com/htc-phones-45.php','HTC');
+
+for(var i=2;i<=5;i++){
+
+	var website_name = "http://www.gsmarena.com/htc-phones-f-45-0-p"+i+".php";
+
+	crawled.crawl_site_gsmarena(website_name,'HTC');
+}
+crawled.crawl_site_gsmarena('http://www.gsmarena.com/blackberry-phones-36.php','Blackberry');
+*/
+/*
+for(var i=2;i<=3;i++){
+
+	var website_name = "http://www.gsmarena.com/blackberry-phones-f-36-0-p"+i+".php";
+
+	crawled.crawl_site_gsmarena(website_name,'Blackberry');
+
+}
+
+
+for(var i=2;i<=7;i++){
+var website_name = "http://www.gsmarena.com/nokia-phones-f-1-0-p"+i+".php";
+
+	crawled.crawl_site_gsmarena(website_name,'Nokia');
+
+}
+*/
 /*
 
 crawled.crawl_site_gsmarena('http://www.gsmarena.com/samsung-phones-9.php','Samsung');
@@ -437,7 +544,7 @@ crawled.crawl_site_gsmarena('http://www.gsmarena.com/acer-phones-f-59-0-p2.php',
 
 
 //request1.crawl('GSM','nokia');
-
+//db1.update_pic_path();
 
 
 exports.db = db;
