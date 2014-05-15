@@ -852,9 +852,11 @@ color:#333;
 padding:17px 0px;
 width:100%;
 min-height:130px;
+margin-left: 0 auto;
+margin-right: 0 auto; 
 }
 .product_options_tab{
-
+display: inline;
 }
 .option_tab{
 padding:14px 22px;
@@ -878,3 +880,16 @@ color:#fff;
 display:none;
 }
 
+#all_description{
+	width:74.5%;
+	margin-left:150px;
+margin-top:-75px;
+	
+
+}
+
+#content_shown{
+	padding:30px 0px;
+
+
+}
