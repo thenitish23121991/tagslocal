@@ -6156,3 +6156,9 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+
+li{
+list-style-type:none;
+
+}
