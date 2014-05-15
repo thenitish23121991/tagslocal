@@ -25,7 +25,7 @@ var nodemailer = require('nodemailer');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3101);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
@@ -239,13 +239,13 @@ res.send(retailer_data);
 });
 });
 
-/*
+
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Apple','Apple');
 
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Nokia/page/'+i,'Nokia');
 }
-
+/*
 
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Motorola/page/'+i,'Motorola');
