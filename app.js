@@ -240,12 +240,14 @@ res.send(retailer_data);
 });
 
 
+/*
+
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Apple','Apple');
 
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Nokia/page/'+i,'Nokia');
 }
-/*
+
 
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Motorola/page/'+i,'Motorola');

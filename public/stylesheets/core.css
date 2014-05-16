@@ -3504,7 +3504,7 @@ html[xmlns] .slides {
 .nav-tabs li.active a:active,
 .nav-tabs li.active a:focus {
   border: none;
-  background-color: #1abc9c;
+ /* background-color: #1abc9c; */
   color: #ffffff;
 }
 .nav-tabs + .box {
@@ -3531,7 +3531,7 @@ html[xmlns] .slides {
 .nav-tabs.nav-stacked > li > a:active,
 .nav-tabs.nav-stacked > li > a:focus {
   border-bottom: 1px solid #1abc9c;
-  background-color: #1abc9c;
+  /*background-color: #1abc9c;*/
   color: #ffffff;
 }
 .nav-tabs.nav-stacked li.active {
