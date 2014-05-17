@@ -3154,7 +3154,7 @@ html[xmlns] .slides {
 | PRODUCT
 ---*/
 .product-info {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .product-info .product-content .nav-tabs {
   margin: -20px -20px 20px;
@@ -3466,8 +3466,11 @@ color:black;
 border:none;
 position:relative;
 cursor:pointer;
-border-right: 3px solid #1abc9c;
+border-right: 1px solid #1abc9c;
 margin-right:0px;
+outline:none;
+  font-family:'Lato';
+  font-weight:300;
 }
 
 .nav-tabs li {
@@ -3526,6 +3529,8 @@ margin-right:0px;
   border: none;
  /* background-color: #1abc9c; */
   color: #ffffff;
+  font-family:'Lato';
+  font-weight:300;
 }
 .nav-tabs + .box {
   position: relative;
