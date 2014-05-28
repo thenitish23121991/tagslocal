@@ -12,9 +12,9 @@
 Retailer: <%= retailer_data[i]['business_name'] %><br/>
 <div class="products_parent">
 
-<% if(typeof(retailer_data[i]['products']) !== "undefined"){
+<% if(typeof(retailer_data[i]['products']) !== "undefined"){ %>
 Products:<br/>
- for(var j=0;j<retailer_data[i]['products'].length;j++){ %>
+<%= for(var j=0;j<retailer_data[i]['products'].length;j++){ %>
 <%= retailer_data[i]['products'][j]['product_name'] %>
 </div>
 <br/><br/>
