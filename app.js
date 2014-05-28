@@ -19,6 +19,7 @@ var category = require('category');
 var page1 = require('page');
 var retailer = require('retailer');
 var search_page_data = new Array();
+var mongo_app = require('mongo');
 
 var db1 = require('db');
 var nodemailer = require('nodemailer');
@@ -209,6 +210,14 @@ app.post('/get_similar_products',function(req,res){
 var brand = req.body.brand;
 db1.get_similar_products(brand,function(data){
 res.send(data);
+});
+});
+
+
+app.get('/get_remote_retailers',function(req,res){
+db1.get_remote_retailers(function(err,docs){
+console.log(docs);
+res.render('retailer_data',{retailer_data:docs});
 });
 });
 
