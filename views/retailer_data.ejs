@@ -9,12 +9,12 @@
 
 <div class="container">
 <% for(var i=0;i<retailer_data.length;i++){ %>
-<%= retailer_data[i]['business_name'] %><br/>
+Retailer: <%= retailer_data[i]['business_name'] %><br/>
 <div class="products_parent">
 
 <% if(typeof(retailer_data[i]['products']) !== "undefined"){
  for(var j=0;j<retailer_data[i]['products'].length;j++){ %>
-<%= retailer_data[i]['products'][j]['product_name'] %>
+Product Name:<%= retailer_data[i]['products'][j]['product_name'] %>
 </div>
 <br/><br/>
 
