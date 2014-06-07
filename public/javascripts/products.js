@@ -38,7 +38,7 @@ dataType:"json"
 
 
 product_best_price.done(function(data){
-console.log(data);
+
 });
 
 product_best_price.fail(function(data){

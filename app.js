@@ -261,7 +261,7 @@ res.send(retailers_data);
 app.post('/get_product_best_price',function(req,res){
 var product_name = req.body.product_name;
 db1.get_product_best_price(product_name,function(err,retailers_data){
-console.log(retailers_data);
+res.send(retailers_data);
 });
 });
 
