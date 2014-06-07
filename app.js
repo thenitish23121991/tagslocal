@@ -258,11 +258,11 @@ res.send(retailers_data);
 });
 
 
-
+/*
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Apple','Apple');
 
 
-/*
+
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Nokia/page/'+i,'Nokia');
 }
@@ -271,12 +271,13 @@ crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/No
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Motorola/page/'+i,'Motorola');
 }
+*/
 
 
 for(var i=1;i<=6;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/HTC/page/'+i,'HTC');
 }
-
+/*
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/LG/page/'+i,'LG');
 }
