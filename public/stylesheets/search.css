@@ -232,3 +232,15 @@ margin-top:23px;
 font-size:15px;
 font-family:'NovecentoLight';
 }
+.header_search_button{
+top:-32px;
+height:32px;
+font-size:12px;
+width:28px;
+left:0px;
+}
+.header_search_button:before{
+font-size:13px;
+top:7px;
+left:8px;
+}

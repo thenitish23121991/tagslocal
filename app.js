@@ -231,7 +231,7 @@ res.send(data);
 app.get('/product',function(req,res){
 var url = req.query.product;
 db1.get_product_by_url(url,function(data){
-console.log(data);
+console.log(url+'<br/>'+data);
 res.render('product',{url:url,c_data:data});
 });
 });
@@ -249,10 +249,20 @@ res.send(retailer_data);
 });
 
 
-/*
+app.post('/get_product_remote_retailers',function(req,res){
+var product_name = req.body.product_name;
+db1.get_product_remote_retailers(product_name,function(err,retailers_data){
+console.log(err+'<br/>'+retailers_data);
+res.send(retailers_data);
+});
+});
+
+
 
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Apple','Apple');
 
+
+/*
 for(var i=1;i<=10;i++){
 crawled.crawl_site_phonearena('http://www.phonearena.com/phones/manufacturers/Nokia/page/'+i,'Nokia');
 }

@@ -913,6 +913,33 @@ background:#1abc9c;
 color:#fff;
 
 }
+.nav_list_container ul{
+margin-left:350px;
+}
 .nav_list_content_container{
 background:#fff;
+position:relative;
+margin-left:40%;
+margin-left:350px;
+}
+.tab_content_container{
+position:absolute;
+top:0px;
+left:0px;
+opacity:0;
+pointer-events:none;
+padding:7px;
+background:#fff;
+width:520px;
+}
+.tab_content_container.selected{
+opacity:1;
+pointer-events:auto;
+}
+button.tab_selected{
+background:#1abc9c;
+color:#fff;
+}
+.tab_offline_retailers_data{
+padding:8px 0px;
 }

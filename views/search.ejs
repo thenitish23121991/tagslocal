@@ -9,7 +9,7 @@
 <body>
 
 
-<% include header %>
+<% include header2 %>
 
 
 <div class="middle_container">
@@ -53,6 +53,26 @@ RETAILERS
 </div>
 </div>
 -->
+
+
+<div class="search_category_container">
+<div class="search_category_top">
+OS
+<div class="search_category_minimise"></div>
+</div>
+<div class="search_category_names search_category_retailers">
+
+<ul>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />ANDROID</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />SYMBIAN</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />IOS</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />WINDOWS</label></li>
+<li><label class="search_brand_label"><input type="checkbox" class="search_retailer_checkbox" selected="selected" />OTHERS</label></li>
+</ul>
+
+</div>
+</div>
+
 
 
 
@@ -102,6 +122,7 @@ SHOWING <span class="num1"> <%= search_data.length %></span> OF <span class="tot
 <% include footer %>
 
 <script type="text/javascript" src="/javascripts/jquery.js"></script>
+<script type="text/javascript" src="/javascripts/index.js"></script>
 <script type="text/javascript" src="/javascripts/search.js"></script>
 
 </body>

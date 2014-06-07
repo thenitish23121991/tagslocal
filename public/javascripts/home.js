@@ -54,9 +54,9 @@ console.log(xhr+'<br/>'+status+'<br/>'+error);
 
 
 $('#font_search').bind('click',function(){
+console.log('done');
 var term = $('.search_box').val();
 location.href = '/search/?search_term='+term+'&no=10';
 });
-
 
 });

@@ -3,8 +3,8 @@ window.onload = function(){
 
 function Tab(el){
 this.el = el;
-this.tab_options = el.children('ul li.option_tab');
-this.tab_content = el.children('.tab_content');
+this.tab_options = $('ul li a.option_tab');
+this.tab_content = $('.nav_list_content_container');
 this.init();
 }
 
@@ -15,17 +15,19 @@ init : function(){
 var self = this;
 
 self.tab_options.bind('click',function(){
-var data_content = $(this).attr('data-content');
-this.show_content(data_content);
+var data_content = $(this).attr('data-tab');
+$('button.button_name').removeClass('tab_selected');
+$(this).children('button.button_name').addClass('tab_selected');
+self.show_content(data_content);
 });
 
 },
 
 show_content : function(data_content){
-console.log(data_content);
+$('.tab_content_container').removeClass('selected');
 var self = this;
-var content = $("#"+data_content).html();
-self.tab_content.html(content);
+var id = "#tab_"+data_content+"_content";
+$(id).addClass('selected');
 }
 
 }
