@@ -28,6 +28,23 @@ product_retailers_data.fail(function(data){
 
 });
 
+
+var product_best_price = $.ajax({
+url:"/get_product_best_price",
+type:"POST",
+data:{product_name:product_name},
+dataType:"json"
+});
+
+
+product_best_price.done(function(data){
+console.log(data);
+});
+
+product_best_price.fail(function(data){
+console.log(data);
+});
+
 console.log('loaded');
 var similar_data;
 var brand = $('.brand_name').html();
